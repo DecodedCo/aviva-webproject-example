@@ -136,16 +136,18 @@
             homePage.innerHTML += createListing(
                 row.title, 
                 row.description, 
-                row.price
+                row.price,
+                row.console
             );
         }
 
-        function createListing(title, desc, price) {
+        function createListing(title, desc, price, console) {
             const template =
             `<div class="game-listing">
                 <h3>${title}</h3>
                 <p>${desc}</p>
                 <p>£${price}</p>
+                <p>${console}</p>
                 <button onclick="addToCart('${title}', ${price})">Add to Cart</button>
             </div>`;
 
